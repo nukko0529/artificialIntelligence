@@ -58,7 +58,7 @@ results = []
 for train_size in train_sizes:
     accuracies = []
     for _ in range(5):
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=None)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=None)
 
         predictions = naive_bayes(x_train, y_train, x_test)
         accuracy = accuracy_score(y_test, predictions)
